@@ -4,8 +4,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 3.2rem 2rem;
-
-  color: var(--white-color);
 }
 
 .logoNav {
@@ -17,10 +15,17 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
-  gap: 1.2rem;
+  gap: 2rem;
 }
 
 .itemLinks {
   font-size: 1.8rem;
   font-weight: bold;
+
+  transition: all 0.2s;
+}
+
+.itemLinks:hover {
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
 }

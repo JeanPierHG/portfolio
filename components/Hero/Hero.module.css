@@ -4,8 +4,6 @@
   gap: 1.2rem;
   align-items: center;
   padding: 0 2rem;
-
-  color: var(--white-color);
 }
 
 .ladoDerecho {
@@ -22,10 +20,11 @@
 
 .header h2 {
   font-size: 6.2rem;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
 .header span {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
 }
 
 .ladoDerecho p {
@@ -33,6 +32,56 @@
 }
 
 .ladoDerecho button {
-  background-color: transparent;
-  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  color: var(--white-color);
+
+  background-color: var(--primary-color-normal);
+  border: 1px solid var(--primary-color-normal);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+
+  align-self: flex-start;
+  font-size: 2.4rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  transition: all 0.2s;
+}
+
+.ladoDerecho button:hover {
+  transform: scale(1.05);
+}
+.iconButtonSend {
+  transition: all 0.2s;
+}
+.iconButtonSend:hover {
+  transform: scale(1.1);
+}
+
+.ladoIzquierdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.picture {
+  background-color: var(--primary-color-light);
+  clip-path: ellipse(45% 49% at 50% 49%);
+}
+
+.redIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.redIcons .github,
+.redIcons .linkedin {
+  font-size: 4.8rem;
+  color: var(--primary-color-normal);
 }
