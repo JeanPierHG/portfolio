@@ -1,13 +1,21 @@
 import Image from 'next/image'
-import styles from './Hero.module.css'
+
 import profile from '../../public/profile.png'
+import { motion } from 'framer-motion'
+
+import styles from './Hero.module.css'
+
 import { VscGithub } from 'react-icons/vsc'
 import { BsLinkedin } from 'react-icons/bs'
 import { RiSendPlane2Line } from 'react-icons/ri'
 const Hero = () => {
   return (
     <div className={styles.hero}>
-      <div className={styles.ladoIzquierdo}>
+      <motion.div
+        initial={{ x: '-100%' }}
+        animate={{ x: 0 }}
+        className={styles.ladoIzquierdo}
+      >
         <Image
           objectFit='cover'
           width={700}
@@ -32,7 +40,7 @@ const Hero = () => {
             <BsLinkedin className={styles.linkedin} />
           </a>
         </div>
-      </div>
+      </motion.div>
       <div className={styles.ladoDerecho}>
         <div className={styles.header}>
           <h2>Hola, soy Jean Pierre</h2>
@@ -43,9 +51,19 @@ const Hero = () => {
           elegido esta carrera, actualmente me encuentro en busquedad de mis
           primeras experiencias profesionales.
         </p>
-        <button>
-          Descargar CV <RiSendPlane2Line className={styles.iconButtonSend} />
-        </button>
+        <motion.button>
+          <a
+            href={
+              'https://drive.google.com/file/d/17aO_O1idvPO2u2R7TnxtgQd_g_i64T3R/view?usp=sharing'
+            }
+            target={'_blank'}
+            rel='noopener noreferrer'
+          >
+            {' '}
+            Descargar CV
+          </a>
+          <RiSendPlane2Line className={styles.iconButtonSend} />
+        </motion.button>
       </div>
     </div>
   )

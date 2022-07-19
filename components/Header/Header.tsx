@@ -4,10 +4,10 @@ import styles from './Header.module.css'
 
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <header id='sobremi' className={styles.header}>
       <Navbar />
       <Hero />
-    </div>
+    </header>
   )
 }
 

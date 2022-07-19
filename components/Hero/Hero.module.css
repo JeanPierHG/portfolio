@@ -34,7 +34,7 @@
 .ladoDerecho button {
   margin-top: 2rem;
   cursor: pointer;
-  color: var(--white-color);
+  color: white;
 
   background-color: var(--primary-color-normal);
   border: 1px solid var(--primary-color-normal);
@@ -46,19 +46,7 @@
 
   display: flex;
   align-items: center;
-  gap: 1.2rem;
-
-  transition: all 0.2s;
-}
-
-.ladoDerecho button:hover {
-  transform: scale(1.05);
-}
-.iconButtonSend {
-  transition: all 0.2s;
-}
-.iconButtonSend:hover {
-  transform: scale(1.1);
+  gap: 1rem;
 }
 
 .ladoIzquierdo {
