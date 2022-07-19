@@ -1,9 +1,27 @@
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root {
+  --white-color: '#f1f1f1';
+  --text-color: #212529;
+  --primary-color-normal: #20c997;
+  --primary-color-light: #63e6be;
+  --primary-color-shadow: #0ca678;
+}
+
+* {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -11,6 +29,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.container {
+  max-width: 1200px;
 }
