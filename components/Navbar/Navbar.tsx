@@ -1,10 +1,16 @@
 import { NextPage } from 'next'
-import React from 'react'
+
+import { motion } from 'framer-motion'
+
 import styles from './Navbar.module.css'
 
 const Navbar: NextPage = () => {
   return (
-    <div className={styles.navbar}>
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={styles.navbar}
+    >
       <div className={styles.logoNav}>
         <p>Jean Pierre Huaman</p>
       </div>
@@ -22,7 +28,7 @@ const Navbar: NextPage = () => {
           <a href='#contacto'>Contacto</a>
         </li>
       </ul>
-    </div>
+    </motion.nav>
   )
 }
 

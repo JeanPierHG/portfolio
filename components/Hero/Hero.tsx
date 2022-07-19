@@ -8,6 +8,7 @@ import styles from './Hero.module.css'
 import { VscGithub } from 'react-icons/vsc'
 import { BsLinkedin } from 'react-icons/bs'
 import { RiSendPlane2Line } from 'react-icons/ri'
+
 const Hero = () => {
   return (
     <div className={styles.hero}>
@@ -41,17 +42,21 @@ const Hero = () => {
           </a>
         </div>
       </motion.div>
-      <div className={styles.ladoDerecho}>
-        <div className={styles.header}>
+      <motion.div className={styles.ladoDerecho}>
+        <motion.div
+          initial={{ x: 100 }}
+          animate={{ x: 0 }}
+          className={styles.header}
+        >
           <h2>Hola, soy Jean Pierre</h2>
           <span>Full Stack Developer</span>
-        </div>
+        </motion.div>
         <p>
           Desarrollador apasionado por el código, para mí es un placer haber
           elegido esta carrera, actualmente me encuentro en busquedad de mis
           primeras experiencias profesionales.
         </p>
-        <motion.button>
+        <motion.button whileHover={{ scale: 1.1 }}>
           <a
             href={
               'https://drive.google.com/file/d/17aO_O1idvPO2u2R7TnxtgQd_g_i64T3R/view?usp=sharing'
@@ -64,7 +69,7 @@ const Hero = () => {
           </a>
           <RiSendPlane2Line className={styles.iconButtonSend} />
         </motion.button>
-      </div>
+      </motion.div>
     </div>
   )
 }
